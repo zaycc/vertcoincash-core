@@ -14,9 +14,9 @@ AC_CONFIG_HEADERS([src/config/bitcoin-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
-BITCOIN_DAEMON_NAME=vertcoind
-BITCOIN_GUI_NAME=vertcoin-qt
-BITCOIN_CLI_NAME=vertcoin-cli
+BITCOIN_DAEMON_NAME=vertcoincashd
+BITCOIN_GUI_NAME=vertcoincash-qt
+BITCOIN_CLI_NAME=vertcoincash-cli
 BITCOIN_TX_NAME=vertcoin-tx
 
 dnl Unless the user specified ARFLAGS, force it to be cr
@@ -295,7 +295,7 @@ CPPFLAGS="$CPPFLAGS -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS"
 
 AC_ARG_WITH([utils],
   [AS_HELP_STRING([--with-utils],
-  [build vertcoin-cli vertcoin-tx (default=yes)])],
+  [build vertcoincash-cli vertcoincash-tx (default=yes)])],
   [build_bitcoin_utils=$withval],
   [build_bitcoin_utils=yes])
 
@@ -307,7 +307,7 @@ AC_ARG_WITH([libs],
 
 AC_ARG_WITH([daemon],
   [AS_HELP_STRING([--with-daemon],
-  [build vertcoind daemon (default=yes)])],
+  [build vertcoincashd daemon (default=yes)])],
   [build_bitcoind=$withval],
   [build_bitcoind=yes])
 
